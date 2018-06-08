@@ -1,0 +1,19 @@
+{
+  "name": "info-board",
+  "version": "1.0.0",
+  "description": "Projeto da disciplina de ESS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franclin Cabral",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
