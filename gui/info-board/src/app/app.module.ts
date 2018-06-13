@@ -3,11 +3,26 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { VoteListComponent } from './vote-list/vote-list.component';
+import { PostComponent } from './post/post.component';
+import { RepElectionComponent } from './rep-election/rep-election.component';
+import { RepDecisionsComponent } from './rep-decisions/rep-decisions.component';
+import { RepHistoryComponent } from './rep-history/rep-history.component';
+import { EligiblesComponent } from './eligibles/eligibles.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent,
+    VoteListComponent,
+    PostComponent,
+    RepElectionComponent,
+    RepDecisionsComponent,
+    RepHistoryComponent,
+    EligiblesComponent,
+    VotacaoPautaComponent
   ],
   imports: [
     BrowserModule
