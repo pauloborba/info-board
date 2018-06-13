@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { VoteListComponent } from './vote-list/vote-list.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    VoteListComponent
+    VoteListComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule
