@@ -21,7 +21,8 @@ import { EligiblesComponent } from './eligibles/eligibles.component';
     RepElectionComponent,
     RepDecisionsComponent,
     RepHistoryComponent,
-    EligiblesComponent
+    EligiblesComponent,
+    VotacaoPautaComponent
   ],
   imports: [
     BrowserModule
