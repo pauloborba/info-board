@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { VoteListComponent } from './vote-list/vote-list.component';
 import { PostComponent } from './post/post.component';
+import { RepElectionComponent } from './rep-election/rep-election.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PostComponent } from './post/post.component';
     AppComponent,
     UserListComponent,
     VoteListComponent,
-    PostComponent
+    PostComponent,
+    RepElectionComponent
   ],
   imports: [
     BrowserModule
