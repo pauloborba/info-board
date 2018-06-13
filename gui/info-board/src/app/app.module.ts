@@ -8,6 +8,7 @@ import { VoteListComponent } from './vote-list/vote-list.component';
 import { PostComponent } from './post/post.component';
 import { RepElectionComponent } from './rep-election/rep-election.component';
 import { RepDecisionsComponent } from './rep-decisions/rep-decisions.component';
+import { RepHistoryComponent } from './rep-history/rep-history.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RepDecisionsComponent } from './rep-decisions/rep-decisions.component';
     VoteListComponent,
     PostComponent,
     RepElectionComponent,
-    RepDecisionsComponent
+    RepDecisionsComponent,
+    RepHistoryComponent
   ],
   imports: [
     BrowserModule
