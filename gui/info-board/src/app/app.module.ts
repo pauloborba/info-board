@@ -9,6 +9,7 @@ import { PostComponent } from './post/post.component';
 import { RepElectionComponent } from './rep-election/rep-election.component';
 import { RepDecisionsComponent } from './rep-decisions/rep-decisions.component';
 import { RepHistoryComponent } from './rep-history/rep-history.component';
+import { EligiblesComponent } from './eligibles/eligibles.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RepHistoryComponent } from './rep-history/rep-history.component';
     PostComponent,
     RepElectionComponent,
     RepDecisionsComponent,
-    RepHistoryComponent
+    RepHistoryComponent,
+    EligiblesComponent
   ],
   imports: [
     BrowserModule
