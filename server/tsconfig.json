@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
+        "typeRoots": ["node_modules/@types"],
         "module": "commonjs",
-        "target": "es5",
+        "target": "es2016",
         "noImplicitAny": false,
-        "sourceMap": false
+        "sourceMap": true,
+        "strict": true,
     }
 }
