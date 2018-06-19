@@ -17,6 +17,7 @@ defineSupportCode(function ({ Given, When, Then }) {
 
     Given(/^eu vejo uma publicação "([^\"]*)" cuja data foi marcada para "([^\"]*)"$/, async () => {
         //TODO await verificar post na lista de publicações do mural que seja do "tipo" reunião e verificar sua data
+        var listaPublicacoes : ElementArrayFinder = element.all(by.name('publicacaolist'));
     })
 
     When(/^eu seleciono a opção "Agenda"$/, async () => {

@@ -1,0 +1,36 @@
+<table>
+<tr>
+   <td><label>Título </label></td>
+   <td><input [(ngModel)]="publicacao.titulo" name="titlebox"></td>
+   <td><button (click)="criarPublicacao(publicacao)">Publicar</button></td>
+</tr>
+<tr>
+   <td><label>Evento </label></td>
+   <td><input [(ngModel)]="publicacao.evento" name="eventbox"></td>
+</tr>
+<tr>
+   <td><label>Tipo </label></td>
+   <td><input [(ngModel)]="publicacao.tipo"></td>
+</tr>
+<tr>
+    <td><label>Corpo da mensagem </label></td>
+    <td><input [(ngModel)]="publicacao.corpo"></td>
+ </tr>
+</table>
+
+<table>
+<tr *ngIf="publicacoes.length > 0">
+   <th>Título</th>
+   <th>Evento</th>
+   <th>Tipo</th>
+   <th>Mensagem</th>
+</tr>
+<tr *ngFor="let p of publicacoes" name="publicacaolist">
+   <td name="titulolist">{{p.titulo}}</td>
+   <td name="eventolist">{{p.evento}}</td>
+   <td name="tipolist">{{p.tipo}}</td>
+   <td name="corpolist">{{p.corpo}}</td>
+</tr>
+</table>
+
+</html>
