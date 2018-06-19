@@ -1,6 +1,6 @@
 {
   "name": "testes-acceptance",
-  "description": "Testes de aceitação do teaching assistant",
+  "description": "Testes de aceitação do info-board",
   "scripts": {
     "tsc": "tsc",
     "test": "protractor typeScript/config/config.js",
