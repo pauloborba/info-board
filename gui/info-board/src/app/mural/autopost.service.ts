@@ -3,7 +3,7 @@ import { Http, Headers } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Noticia } from './model/noticia';
+import { Publicacao } from '../model/publicacao';
 
 @Injectable()
 export class AutopostService {
