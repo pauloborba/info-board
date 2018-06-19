@@ -14,16 +14,22 @@ defineSupportCode(function ({ Given, When, Then }) {
         await $("a[name='publicacoes']").click();
     })
 
-    Given(/^eu vejo uma publicação "([^\"]*)" cuja data foi marcada para "([^\"]*)"$/, async () => {
-        //TODO await verificar post na lista de publicações do mural que seja do tipo data_reuniao e verificar sua data
+    Given(/^eu vejo uma publicação "([^\"]*)" cuja data foi marcada para "([^\"]*)"$/, async (nome_publicacao, data_publicacao) => {
+        //verificar post na lista de publicações do mural que seja do tipo data_reuniao e verificar sua data
         var listaPublicacoes : ElementArrayFinder = element.all(by.name('publicacaolist'));
+        await listaPublicacoes;
+        await expect(Promise.resolve(listaPublicacoes.findElement(nome_publicacao)).getType()).to.eventually.equal("data_reuniao");
+        await expect(Promise.resolve(listaPublicacoes.findElement(nome_publicacao)).getEventDate()).to.eventually.equal(data_publicacao);
     })
 
     When(/^eu seleciono a opção "Agenda"$/, async () => {
         await $("a[name='agenda']").click();
     });
 
-    Then(/^eu visualizo um calendário em que a data "([^\"]*)" está marcada com o evento "([^\"]*)"$/, async () => {
-        //TODO await verificar evento da data no calendário
+    Then(/^eu visualizo um calendário em que a data "([^\"]*)" está marcada com o evento "([^\"]*)"$/, async (data, evento) => {
+        //verificar evento da data no calendário
+        var datasCalendario : ElementArrayFinder = element.all(by.name('dataslist'));
+        await datasCalendario;
+        await expect(Promise.resolve(datasCalendario.findElement(data)).getEvent()).to.eventually.equal(evento);
     });
 })
