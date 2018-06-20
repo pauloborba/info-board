@@ -7,5 +7,7 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./agenda.component.css']
 })
 export class AgendaComponent implements OnInit {
-
+  ngOnInit(): void {
+    
+  }
 }

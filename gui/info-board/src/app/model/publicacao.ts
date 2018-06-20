@@ -1,13 +1,8 @@
-const postType = {
-    NO_EVENT: 'no_event',
-    DATA_REUNIAO: 'data_reuniao',
-    PAUTA_REUNIAO: 'pauta_reuniao',
-}
-
 export class Publicacao {
     titulo: string; //nome do post
-    tipo: string; //postType.DATA_REUNIAO, postType.PAUTA_REUNIAO, postType.NO_EVENT
     evento: string; //nome ou id da reuniao a que se refere, null caso seja no_event 
+    data_evento: Date; //data da reunião associada
+    pauta_evento: string; //pauta da reunião associada
     corpo: string; //mensagem da publicacao
   
     constructor() {
@@ -16,8 +11,9 @@ export class Publicacao {
   
     clean(): void {
       this.titulo = "";
-      this.tipo = postType.NO_EVENT;
       this.evento = null;
+      this.data_evento = null;
+      this.pauta_evento = null;
       this.corpo = "";
     }
   
@@ -29,9 +25,15 @@ export class Publicacao {
   
     copyFrom(from: Publicacao): void {
       this.titulo = from.titulo;
-      this.tipo = from.tipo;
       this.evento = from.evento;
       this.corpo = from.corpo;
     }
 
+    getEventDate(): Date {
+      return this.data_evento;
+    }
+
+    getEventTopic(): string {
+      return this.pauta_evento;
+    }
   }

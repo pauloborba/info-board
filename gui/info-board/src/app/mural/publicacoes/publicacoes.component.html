@@ -1,36 +1,46 @@
-<table>
-<tr>
-   <td><label>Título </label></td>
-   <td><input [(ngModel)]="publicacao.titulo" name="titlebox"></td>
-   <td><button (click)="criarPublicacao(publicacao)">Publicar</button></td>
-</tr>
-<tr>
-   <td><label>Evento </label></td>
-   <td><input [(ngModel)]="publicacao.evento" name="eventbox"></td>
-</tr>
-<tr>
-   <td><label>Tipo </label></td>
-   <td><input [(ngModel)]="publicacao.tipo"></td>
-</tr>
-<tr>
-    <td><label>Corpo da mensagem </label></td>
-    <td><input [(ngModel)]="publicacao.corpo"></td>
- </tr>
-</table>
+<h2 id="tituloMural">
+    Mural de Informações
+</h2>
 
 <table>
-<tr *ngIf="publicacoes.length > 0">
-   <th>Título</th>
-   <th>Evento</th>
-   <th>Tipo</th>
-   <th>Mensagem</th>
-</tr>
-<tr *ngFor="let p of publicacoes" name="publicacaolist">
-   <td name="titulolist">{{p.titulo}}</td>
-   <td name="eventolist">{{p.evento}}</td>
-   <td name="tipolist">{{p.tipo}}</td>
-   <td name="corpolist">{{p.corpo}}</td>
-</tr>
+    <tr>
+        <td>
+            <label>Título </label>
+        </td>
+        <td>
+            <label name="titlebox">Reunião X</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Evento </label>
+        </td>
+        <td>
+            <label name="eventbox">evento</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Data do evento </label>
+        </td>
+        <td>
+            <label name="eventdatebox">05/06/2018</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Pauta do evento </label>
+        </td>
+        <td>
+            <label name="eventtopicbox">pauta</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Corpo da mensagem </label>
+        </td>
+        <td>
+            <label name="publicacao.corpo">mensagem</label>
+        </td>
+    </tr>
 </table>
-
-</html>

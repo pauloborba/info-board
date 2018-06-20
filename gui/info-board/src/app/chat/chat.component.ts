@@ -7,5 +7,7 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-
+  ngOnInit(): void {
+  
+  }
 }
