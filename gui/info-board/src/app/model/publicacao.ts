@@ -1,9 +1,9 @@
+import { Reuniao } from './reuniao';
+
 export class Publicacao {
     titulo: string; //nome do post
-    evento: string; //nome ou id da reuniao a que se refere, null caso seja no_event 
-    data_evento: Date; //data da reunião associada
-    pauta_evento: string; //pauta da reunião associada
-    corpo: string; //mensagem da publicacao
+    evento: Reuniao; //reuniao a que se refere
+    mensagem: string; //mensagem da publicacao
   
     constructor() {
       this.clean();
@@ -12,9 +12,7 @@ export class Publicacao {
     clean(): void {
       this.titulo = "";
       this.evento = null;
-      this.data_evento = null;
-      this.pauta_evento = null;
-      this.corpo = "";
+      this.mensagem = "";
     }
   
     clone(): Publicacao {
@@ -26,14 +24,10 @@ export class Publicacao {
     copyFrom(from: Publicacao): void {
       this.titulo = from.titulo;
       this.evento = from.evento;
-      this.corpo = from.corpo;
+      this.mensagem = from.mensagem;
     }
 
-    getEventDate(): Date {
-      return this.data_evento;
-    }
-
-    getEventTopic(): string {
-      return this.pauta_evento;
+    getEvent(): Reuniao {
+      return this.evento;
     }
   }

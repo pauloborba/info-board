@@ -25,9 +25,9 @@ export class PublicacoesComponent implements OnInit {
    }
 
    ngOnInit(): void {
-     /*this.publicacaoService.getPublicacoes()
+     this.publicacaoService.getPublicacoes()
          .then(as => this.publicacoes = as)
-         .catch(erro => alert(erro));*/
+         .catch(erro => alert(erro));
    }
 
 }

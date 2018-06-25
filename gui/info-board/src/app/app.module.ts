@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatCardModule } from '@angular/material';
@@ -7,6 +6,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { CalendarModule } from 'angular-calendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -22,6 +24,7 @@ import { NetworkingService } from './networking/networking.service';
 import { MockNetworkingService } from './networking/mocknetworking.service';
 import { PublicacoesComponent } from './mural/publicacoes/publicacoes.component';
 import { AgendaComponent } from './mural/agenda/agenda.component';
+import { AgendaModule } from './mural/agenda/agenda.module';
 
 @NgModule({
   exports: [
@@ -56,6 +59,10 @@ import { AgendaComponent } from './mural/agenda/agenda.component';
     FlexLayoutModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
+    CalendarModule.forRoot(),
+    BrowserAnimationsModule,
+    AgendaModule,
     RouterModule.forRoot([
       {
         path: 'publicacoes',
@@ -65,9 +72,13 @@ import { AgendaComponent } from './mural/agenda/agenda.component';
         path: 'agenda',
         component: AgendaComponent
       }
-    ])
+    ]),
+    RouterModule.forChild([{
+        path: '', component: AgendaComponent
+    }]),
   ],
   providers: [NetworkingService, MockNetworkingService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [AgendaComponent],
 })
 export class AppModule { }

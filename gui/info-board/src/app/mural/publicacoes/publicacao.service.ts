@@ -8,7 +8,7 @@ import { Publicacao } from '../../model/publicacao';
 export class PublicacaoService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private taURL = 'http://localhost:3000';
+  private taURL = 'http://localhost:5000';
 
   constructor(private http: Http) { }
 
