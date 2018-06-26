@@ -9,7 +9,7 @@ const defaultConfig: Config = {
         return '5000';
     },
     get mongoUrl() {
-        return <string> process.env.DATABASE_URL
+        return 'mongodb://localhost:27017'
     }
 };
 
