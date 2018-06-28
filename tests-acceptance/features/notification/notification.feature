@@ -24,6 +24,6 @@ Then Eu posso ver a notificação "Ata de reunião" na lista de notificações
 
 Scenario: Contador de notificações zero
 Given Estou logado com o usuário "João"
-And Vejo uma notificação de postagem "Ata de reunião"
-When Eu visualizo a postagem "Ata de reunião" 
-Then O ícone "home" não contém indicador de postagem
+And Vejo o indicador notificação de postagem tem "1"
+When Eu clico na postagem
+Then O ícone "postNotification" não contém indicador de postagem

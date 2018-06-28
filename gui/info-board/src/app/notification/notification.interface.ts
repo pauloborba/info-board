@@ -1,7 +1,14 @@
-interface  INotification {
+export default interface  INotification {
+  _id: string;
   user: any;
   title: string;
   subtitle: string;
+  type: NotificationType;
+  body: any;
+  wasSeen: boolean;
 }
 
-export default INotification;
+export enum NotificationType {
+  Chat,
+  Post
+}

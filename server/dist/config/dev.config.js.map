@@ -1,0 +1,1 @@
+{"version":3,"file":"dev.config.js","sourceRoot":"","sources":["../../config/dev.config.ts"],"names":[],"mappings":";;AACA,qCAAwC;AAExC,MAAM,SAAS,GAAW;IACtB,IAAI,GAAG;QACH,OAAO,qBAAY,CAAC,WAAW,CAAA;IACnC,CAAC;IACD,IAAI,IAAI;QACJ,OAAO,MAAM,CAAC;IAClB,CAAC;IACD,IAAI,QAAQ;QACR,OAAO,2BAA2B,CAAA;IACtC,CAAC;CACJ,CAAC;AAEF,kBAAe,SAAS,CAAA"}

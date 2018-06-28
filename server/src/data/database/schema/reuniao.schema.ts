@@ -1,6 +1,6 @@
 import { Connection, Document, Model, Schema } from "mongoose";
 import { getDatabaseManager } from "../../../factory/database.factory"
-import { Reuniao } from "../../../../../gui/info-board/src/app/model/reuniao";
+import { Reuniao } from "../../model/reuniao.model";
 
 let ReuniaoSchema = new Schema({
     titulo: {required: true, type: String},
