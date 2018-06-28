@@ -16,8 +16,7 @@ export class NotificationComponent implements OnInit {
   chatBadgeIndicator: Number;
   postBadgeIndicator: Number;
 
-  //TODO: Trocar para networking service quando serviço de notificação estiver finalizado.
-  constructor(private networkingService: MockNetworkingService) {
+  constructor(private networkingService: NetworkingService) {
     this.splitNotifications([]);
   }
 
@@ -61,6 +60,6 @@ export class NotificationComponent implements OnInit {
     this.networkingService.getNotifications()
       .then(res => this.splitNotifications(res))
       .catch(error => console.log('Não foi possivel recuperar notificações'));
-   }
+  }
 
 }
