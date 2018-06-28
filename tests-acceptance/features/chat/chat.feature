@@ -15,8 +15,7 @@ Scenario: criar conversa em grupo
     And eu seleciono os usuários "André", "Bruna", "Carlos" e "Daniela"
     And eu preencho "nome" com "Projeto"
     And eu submeto a criação do grupo
-    Then eu vejo na "janela principal" a conversa em grupo "Projeto" com os usuários 
-    "André", "Bruna", "Carlos" e "Daniela"
+    Then eu vejo na "janela principal" a conversa em grupo "Projeto" com os usuários "André", "Bruna", "Carlos" e "Daniela"
 
 Scenario: receber mensagem
     Given o usuário "João" está online

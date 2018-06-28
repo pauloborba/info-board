@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "author": "Franclin Cabral",
   "license": "MIT",
   "devDependencies": {
+    "@types/jasmine": "^2.8.8",
     "@types/node": "^10.3.2",
-    "ts-node": "^6.1.1",
+    "@types/request-promise": "^4.1.41",
+    "@types/sinon": "^5.0.1",
+    "jasmine": "^2.8.0",
+    "request-promise": "^4.2.2",
+    "sinon": "^6.0.1",
+    "ts-node": "^6.2.0",
     "typescript": "^2.9.2"
   },
   "dependencies": {
