@@ -7,5 +7,7 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./grupo.component.css']
 })
 export class GrupoComponent implements OnInit {
-
+  ngOnInit(): void {
+    
+  }
 }

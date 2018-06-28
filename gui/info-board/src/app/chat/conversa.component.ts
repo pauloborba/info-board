@@ -7,5 +7,8 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./conversa.component.css']
 })
 export class ConversaComponent implements OnInit {
+  ngOnInit(): void {
+   
+  }
 
 }

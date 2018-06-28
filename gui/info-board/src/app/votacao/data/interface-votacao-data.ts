@@ -1,3 +1,6 @@
+import Votacao from '../../model/votacao';
+import Usuario from '../../model/votacao';
+
 interface VoteData{
     data : Date;
     votacao: Votacao;

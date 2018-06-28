@@ -6,5 +6,6 @@
         "noImplicitAny": false,
         "sourceMap": true,
         "strict": true,
+        "strictPropertyInitialization": false
     }
 }
