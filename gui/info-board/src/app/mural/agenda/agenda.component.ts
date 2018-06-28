@@ -69,7 +69,6 @@ export class AgendaComponent implements OnInit {
     this.events$ = this.loadReunioes()
       .pipe(map((results: Reuniao[]) => {
           return results.map((reuniao: Reuniao) => {
-            console.log(reuniao);
             return {
               title: reuniao.titulo,
               start: new Date(reuniao.data),

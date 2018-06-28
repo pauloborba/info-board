@@ -78,7 +78,7 @@ import { AgendaModule } from './mural/agenda/agenda.module';
     }]),
   ],
   providers: [NetworkingService, MockNetworkingService],
-  bootstrap: [AppComponent],
   exports: [AgendaComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

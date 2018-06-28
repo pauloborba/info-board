@@ -44,20 +44,3 @@
         </td>
     </tr>
 </table>
-
-<table>
-    <tr *ngIf="publicacoes.length > 0">
-        <th>Título</th>
-        <th>Evento</th>
-        <th>Data do evento</th>
-        <th>Pauta do evento</th>
-        <th>Mensagem</th>
-    </tr>
-    <tr *ngFor="let p of publicacoes" name="publicacaolist">
-        <td name="titlelist">{{p.titulo}}</td>
-        <td name="eventlist">{{p.evento.getTitle()}}</td>
-        <td name="eventdatelist">{{p.evento.getDate()}}</td>
-        <td name="eventtopiclist">{{p.evento.getTopic()}}</td>
-        <td name="messagelist">{{p.mensagem}}</td>
-    </tr>
-</table>
