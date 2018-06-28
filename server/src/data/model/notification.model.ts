@@ -5,4 +5,10 @@ export interface Notification {
     senderId: string;
     wasSeen: boolean;
     body: any;
+    type: NotificationType;
+}
+
+export enum NotificationType {
+    Chat,
+    Post
 }

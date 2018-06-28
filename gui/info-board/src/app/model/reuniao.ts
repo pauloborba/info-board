@@ -1,16 +1,16 @@
 export class Reuniao {
-    titulo: string; //título da reunião
-    data: Date; //data da reunião
-    pauta: string; //pauta da reunião
+    titulo: string; // título da reunião
+    data: Date; // data da reunião
+    pauta: string; // pauta da reunião
   
     constructor() {
       this.clean();
     }
   
     clean(): void {
-      this.titulo = "";
+      this.titulo = '';
       this.data = new Date();
-      this.pauta = "";
+      this.pauta = '';
     }
   
     clone(): Reuniao {

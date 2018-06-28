@@ -1,0 +1,29 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" name="button-chat">
+        <mat-icon class="icon">notifications</mat-icon>
+        <span name="chatNotification" class="badge" *ngIf="chatBadgeIndicator > 0">{{ chatBadgeIndicator }}</span>
+</button>
+<mat-menu #menu="matMenu" class="menu-notification">
+        <ul>
+            <li mat-menu-item *ngFor="let notification of chatNotifications">
+                <button (click)="setNotificationSeen(notification)">
+                        <p class="notification-title">{{ notification.title }}</p>
+                        <p class="notification-subtitle">{{ notification.subtitle }}</p>
+                </button>
+            </li>
+        </ul>
+</mat-menu>
+<button mat-icon-button [matMenuTriggerFor]="menu2">
+        <mat-icon class="icon">home</mat-icon>
+        <span name="postNotification" class="badge" *ngIf="postBadgeIndicator > 0">{{ postBadgeIndicator }}</span>
+</button>
+<mat-menu #menu2="matMenu" class="menu-notification">
+    <ul>
+        <li mat-menu-item *ngFor="let notification of postNotifications">
+            <button (click)="setNotificationSeen(notification)">
+                    <p class="notification-title">{{ notification.title }}</p>
+                    <p class="notification-subtitle">{{ notification.subtitle }}</p>
+            </button>
+        </li>
+    </ul>
+</mat-menu>
+
