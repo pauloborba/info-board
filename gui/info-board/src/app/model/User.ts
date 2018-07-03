@@ -1,10 +1,10 @@
 export interface IUser {
-  firstName:String;
-  lastName:String;
-  userId: String;
+  firstName: string;
+  lastName: string;
+  userId: string;
 }
 
-export default User {
+export default class User {
   firstName: String;
   lastName: String;
   userId: String;

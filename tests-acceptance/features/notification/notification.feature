@@ -3,29 +3,27 @@ Feature: Notificação
   I devo ser capaz de receber notificações das votações, postagens e chat
   So that eu possa votar, verificar as postagens e mensagens recebidas no chat
 
+Scenario: Redirecionar atraves de notificação
+Given Estou logado com o usuário "João"
+And Recebo uma notificação de nova postagem
+When Eu clico na notificação com o título "Ata de reunião"
+Then Sou redirecionado para a página de postagem com o título "Ata de reunião"
 
-Scenario: Notificação de Abertura de votação
-Given Uma Votação com o título "Votação de pauta" foi aberta no sistema
-And Uma lista com usuários "João" e "José" associados a votação
-When  O sistema salva a votação de título "Votação de pauta"
-Then Uma notificação será enviada para "João" e para "José"
+Scenario: Notificação de chat
+Given "João" tem "0" no contador de notificação
+And O usuário "José" mandou a mensagem "Olá joão" para o usuário "João"
+When O usuário "João" entrar no sistema
+Then O usuário "João" pode ver no ícone "home" o indicador de mensagem com contador "1"
 
+Scenario: Notificação recebida
+Given Tem uma nova postagem com título "Ata de reunião" cadastrada no sistema
+And O usuário "João" ainda não visualizou a notificação de "Ata de reunião"
+When Eu logo com o usuário "João"
+And Clico no ícone "home"
+Then Eu posso ver a notificação "Ata de reunião" na lista de notificações
 
-Scenario: Notificação de tempo restante para votar
-Given Existe uma votação "Votação de Pauta"
-And Restam  menos de “12  horas” para o fim da votação “ Votação de Pauta”
-And O usuário “João” ainda não votou na votação “Votação de Pauta”
-When O usuário “João” entra na página “principal”
-Then “João” pode ver um alerta de notificação na parte superior da tela
-
-Scenario: Notificação de postagem
-Given Uma postagem existe no sistema
-And Uma lista com usuário “João” existe
-And O usuário “João” não viu a postagem
-When O usuário “João” entra na página “principal”
-Then O usuário “ João” pode ver um alerta na parte superior direita do sistema
-
-Scenario: Notificação de mensagem de chat
-Given Uma mensagem é enviada para o usuário "João" pelo chat
-And "João" está online do sistema
-Then Uma notificação de mensagem aparece no canto superior direito da GUI do sistema.
+Scenario: Contador de notificações zero
+Given Estou logado com o usuário "João"
+And Vejo o indicador notificação de postagem tem "1"
+When Eu clico na postagem
+Then O ícone "postNotification" não contém indicador de postagem

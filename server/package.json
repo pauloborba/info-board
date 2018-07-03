@@ -4,16 +4,30 @@
   "description": "Projeto da disciplina de ESS",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=dev node index.js",
+    "test": "jasmine"
   },
   "author": "Franclin Cabral",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^10.3.2"
+    "@types/jasmine": "^2.8.8",
+    "@types/node": "^10.3.2",
+    "@types/request-promise": "^4.1.41",
+    "@types/sinon": "^5.0.1",
+    "jasmine": "^2.8.0",
+    "request-promise": "^4.2.2",
+    "sinon": "^6.0.1",
+    "ts-node": "^6.2.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
+    "@types/body-parser": "^1.17.0",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "http-status-codes": "^1.3.0",
+    "mongoose": "^5.1.5",
+    "mongoose-bcrypt": "^1.5.1",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
   }
 }
